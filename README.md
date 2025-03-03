@@ -1,6 +1,6 @@
 # 🚗 Car Dealership Inventory Management System  
 
-## 📌 Group Project Task 1 (TEAM 3)  
+## 📌 Group Project TEAM 3  
 
 ### 👥 Group Members and Roles  
 - **Alex** – CODER, TESTING, PROJECT MANAGEMENT  
