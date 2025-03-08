@@ -6,7 +6,14 @@ public class Main {
         boolean loop = true;
         int value;
 
+        //Simple Testing of Code Systems (Will be romoved Later)
+        Vehicle car1 = new Vehicle();
+        System.out.println(car1.toString());
 
+        Financing.getFinanacing(car1, 700);
+        Financing.getFinanacing(car1, 500);
+        Financing.getFinanacing(car1, 200);
+        /*
         do{
             System.out.println("===== Welcome to the Car Dealership Management System =====");
             System.out.println("1: View All Inventory");
@@ -37,5 +44,7 @@ public class Main {
                     System.out.println("Error: Invalid Input. Enter an Integer between 1 and 4.");
             }
         }while(loop);
+
+         */
     }
 }
