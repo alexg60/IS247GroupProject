@@ -6,10 +6,11 @@ public class Financing {
         double monthlyPaymentp1;
         double monthlyPaymentp2;
         double monthlyPayment;
-        double loanLength = loanYears * 12;
+        double loanMonths = loanYears * 12;
         double totalPayment;
         double monthlyInterestRate;
 
+        //Assigns a different interest rate based on credit score
         if(creditScore >= 800){
             interestRate = 0.025;
         } else if (creditScore >= 700) {
@@ -22,17 +23,15 @@ public class Financing {
             interestRate = 0.10;
         }
 
+        //Calculations for Montly Payment and Total Payment over loan.
         monthlyInterestRate = interestRate / 12;
-
-        monthlyPaymentp1 = (vehicle.Price * monthlyInterestRate * Math.pow(1 + monthlyInterestRate,loanLength));
-        monthlyPaymentp2 = (Math.pow(1+monthlyInterestRate, loanLength) - 1);
+        monthlyPaymentp1 = (vehicle.Price * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, loanMonths));
+        monthlyPaymentp2 = (Math.pow(1+monthlyInterestRate, loanMonths) - 1);
         monthlyPayment = monthlyPaymentp1 / monthlyPaymentp2;
-        totalPayment = monthlyPayment * loanLength;
+        totalPayment = monthlyPayment * loanMonths;
 
+        //Output statement to display financing information
         System.out.printf("Your interest rate is %.2f%%. For a " + loanYears + "-year loan your monthly payment will be $%.2f and you will" +
                 " have a total payment of $%.2f.\n", (interestRate * 100), monthlyPayment, totalPayment);
-
-        //System.out.printf("Your interest rate is " + (interestRate * 100) + "%. For a 5 year loan you will have montly payment " +
-         //       "of $" + monthlyPayment + " and a total payment of $" + totalPayment + ".");
     }
 }
