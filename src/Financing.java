@@ -1,12 +1,12 @@
 
 
 public class Financing {
-    public static void getFinanacing(Vehicle vehicle, int creditScore){
+    public static void getFinancing(Vehicle vehicle, int creditScore, int loanYears){
         double interestRate;
         double monthlyPaymentp1;
         double monthlyPaymentp2;
         double monthlyPayment;
-        double loanLength = 60;
+        double loanLength = loanYears * 12;
         double totalPayment;
         double monthlyInterestRate;
 
@@ -29,7 +29,7 @@ public class Financing {
         monthlyPayment = monthlyPaymentp1 / monthlyPaymentp2;
         totalPayment = monthlyPayment * loanLength;
 
-        System.out.printf("Your interest rate is %.2f%%. For a 5-year loan your monthly payment will be $%.2f and you will" +
+        System.out.printf("Your interest rate is %.2f%%. For a " + loanYears + "-year loan your monthly payment will be $%.2f and you will" +
                 " have a total payment of $%.2f.\n", (interestRate * 100), monthlyPayment, totalPayment);
 
         //System.out.printf("Your interest rate is " + (interestRate * 100) + "%. For a 5 year loan you will have montly payment " +

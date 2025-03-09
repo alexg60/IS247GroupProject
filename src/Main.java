@@ -10,9 +10,11 @@ public class Main {
         Vehicle car1 = new Vehicle();
         System.out.println(car1.toString());
 
-        Financing.getFinanacing(car1, 700);
-        Financing.getFinanacing(car1, 500);
-        Financing.getFinanacing(car1, 200);
+        Financing.getFinancing(car1, 700, 4);
+        Financing.getFinancing(car1, 700, 5);
+        Financing.getFinancing(car1, 700, 6);
+        Financing.getFinancing(car1, 500, 6);
+        Financing.getFinancing(car1, 200, 5);
         /*
         do{
             System.out.println("===== Welcome to the Car Dealership Management System =====");
