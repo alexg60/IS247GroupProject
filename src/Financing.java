@@ -1,5 +1,4 @@
 
-
 public class Financing {
     public static void getFinancing(Vehicle vehicle, int creditScore, int loanYears){
         double interestRate;

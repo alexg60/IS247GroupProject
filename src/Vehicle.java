@@ -35,7 +35,7 @@ public class Vehicle {
     @Override
     public String toString(){
         return ("Vehicle Make: " + Make + "\nVehicle Model: " + Model + "\nVehicle Year: " + Year +
-                "\nVehicle Color: " + Color + "\nVehilce Cost: $" + Price);
+                "\nVehicle Color: " + Color + "\nVehilce Cost: $" + Price + "\n\n");
     }
 
 }
