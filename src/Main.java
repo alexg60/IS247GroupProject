@@ -14,14 +14,15 @@ public class Main {
         listOFVehicles.add(car1);
         listOFVehicles.add(car2);
 
-        /*
+        System.out.print(listOFVehicles.get(0));
+
         do{
             System.out.println("===== Welcome to the Car Dealership Management System =====");
             System.out.println("1: View All Inventory");
             System.out.println("2: Add New Car");
             System.out.println("3: Remove Car");
             System.out.println("4: Financing");
-            System.out.println("5: Kelly Blue Book Lookup")
+            System.out.println("5: Kelly Blue Book Lookup");
             System.out.println("6: Quit");
             System.out.print("Enter a number matching an option above: ");
             value = scan.nextInt();
@@ -34,8 +35,8 @@ public class Main {
                     }
                     break;
                 case 2:
-                    //.AddNewVehcile
-                    System.out.println("Adding Car");
+                    //AddNewVehcile
+                    System.out.println("\nAdding Car");
                     System.out.print("Enter the make of the car: ");
                     String make = scan.next();
                     System.out.print("Enter the model of the car: ");
@@ -48,7 +49,7 @@ public class Main {
                     double price = scan.nextDouble();
 
                     Vehicle newVehicle = new Vehicle(make, model, year, color, price);
-                    listOfVehicles.add(newVehicle);
+                    listOFVehicles.add(newVehicle);
 
                     break;
                 case 3:
@@ -56,15 +57,18 @@ public class Main {
                     break;
                 case 4:
                     //Financing and or sales
-                    System.out.println(" ===== Sales Page ===== ");
-                    System.out.print("Enter name of the car object: ");
-                    ----- Figure out how to input the object name into the method -----
+                    System.out.println("\n ===== Sales Page ===== ");
+                    System.out.println("The Range of cars in the inventory: 0-" + listOFVehicles.size());
+                    System.out.print("Enter number of the car object: ");
+                    int carNumber = scan.nextInt();
+                    carNumber -= 1;
+                    //----- Figure out how to input the object name into the method -----
                     System.out.print("Enter the customer's credit score: ");
                     int creditScore = scan.nextInt();
-                    System.out.print("Enter the length of the loan in years: );
+                    System.out.print("Enter the length of the loan in years: ");
                     int loanYears = scan.nextInt();
-                    ----- add error prevention for all the inputs -----
-                    Financing.getFinancing(carObject, creditScore, loanYears);
+                    //----- add error prevention for all the inputs -----
+                    Financing.getFinancing(car1, creditScore, loanYears);;
                     break;
                 case 5:
                     loop = false;
@@ -74,9 +78,9 @@ public class Main {
             }
         }while(loop);
 
-        Possible APIs to use
-        https://api-ninjas.com/api/cars
+        //Possible APIs to use
+        //https://api-ninjas.com/api/cars
 
-         */
+
     }
 }

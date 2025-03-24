@@ -30,7 +30,7 @@ public class Financing {
         totalPayment = monthlyPayment * loanMonths;
 
         //Output statement to display financing information
-        System.out.printf("Your interest rate is %.2f%%. For a " + loanYears + "-year loan your monthly payment will be $%.2f and you will" +
-                " have a total payment of $%.2f.\n", (interestRate * 100), monthlyPayment, totalPayment);
+        System.out.printf("\nYour interest rate is %.2f%%. For a " + loanYears + "-year loan your monthly payment will be $%.2f and you will" +
+                " have a total payment of $%.2f.\n\n", (interestRate * 100), monthlyPayment, totalPayment);
     }
 }
