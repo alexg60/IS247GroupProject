@@ -23,17 +23,3 @@ The **Car Dealership Inventory Management System** is designed to streamline veh
 
 This system will provide a **user-friendly interface**, ensuring a seamless experience for dealership staff while improving overall efficiency in inventory and sales management. 🚀  
 
----
-
-## 🐳 Docker and Java Integration
-
-As part of our project, we demonstrated how to compile and run a simple Java application using Docker. This helps simulate real-world deployment environments and adds hands-on experience with containerization.
-
-### ✅ Java Program
-**HelloWorld.java**
-```java
-public class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, Docker and Java!");
-    }
-}
