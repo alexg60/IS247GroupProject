@@ -6,7 +6,7 @@
 - **Alex** – CODER, TESTING, PROJECT MANAGEMENT  
 - **MJ** – CODER, TESTER/DEBUGGING  
 - **Abdul** – TESTING / DEBUGGING  
-- **Chris** – TESTING / DEBUGGING, PROJECT MANAGEMENT  
+- **Chris** – TESTING / DEBUGGING  
 
 ---
 
@@ -22,3 +22,4 @@ The **Car Dealership Inventory Management System** is designed to streamline veh
 ✅ **Track sales per employee** and generate **sales reports**  
 
 This system will provide a **user-friendly interface**, ensuring a seamless experience for dealership staff while improving overall efficiency in inventory and sales management. 🚀  
+
