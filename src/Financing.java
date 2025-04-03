@@ -10,7 +10,7 @@ public class Financing {
         double monthlyInterestRate;
 
         //Assigns a different interest rate based on credit score
-        if(creditScore >= 800){
+        if(creditScore >= 800 && creditScore <= 850){
             interestRate = 0.025;
         } else if (creditScore >= 700) {
             interestRate = 0.035;
