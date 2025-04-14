@@ -1,7 +1,7 @@
 import java.util.*;
 
 /*
-This is the
+This is the Main Method
  */
 
 public class Main {
