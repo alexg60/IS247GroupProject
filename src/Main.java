@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.util.*;
 
+
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -14,6 +15,10 @@ public class Main {
 
         listOFVehicles.add(car1);
         listOFVehicles.add(car2);
+        Employee employee = new Employee();
+        Employee employee1 = new Employee("Alex Gilbert","Branch Manager",125000);
+        System.out.println(employee);
+        System.out.println(employee1);
 
         do{
             System.out.println("===== Welcome to the Car Dealership Management System =====");
@@ -21,7 +26,7 @@ public class Main {
             System.out.println("2: Add New Car");
             System.out.println("3: Remove Car");
             System.out.println("4: Financing");
-            System.out.println("5: Kelly Blue Book Lookup");
+            System.out.println("5: Car API LookUp");
             System.out.println("6: Quit");
             System.out.print("Enter a number matching an option above: ");
             value = scan.nextInt();
@@ -60,13 +65,17 @@ public class Main {
                     Financing.getFinancing(listOFVehicles.get(carNumber), creditScore, loanYears);;
                     break;
                 case 5:
-                    /*
-                    This is where to add the option to connect to the Kelly Blue Book API
-                    the user will need to input a cars vin number which will then be used to loop up that vehicle
-                     */
-                    loop = false;
+                    CarAPI apiClient = new CarAPI();
+                    String make = "Toyota";
+                    String model = "Camry";
+
+                    String carData = apiClient.getCarInfo(make, model);
+                    System.out.println("Car Data: ");
+                    String prettyJson = formatJson(carData);
+                    System.out.println(prettyJson);
                     break;
                 case 6:
+                    System.out.println("Quitting Dealership Management System");
                     loop = false;
                     break;
                 default:
@@ -78,5 +87,56 @@ public class Main {
         //https://api-ninjas.com/api/cars
 
 
+    }
+
+    public static String formatJson(String json) {
+        StringBuilder formatted = new StringBuilder();
+        int indentLevel = 0;
+        boolean inQuotes = false;
+
+        for (char ch : json.toCharArray()) {
+            switch (ch) {
+                case '"':
+                    formatted.append(ch);
+                    if (ch == '"') {
+                        inQuotes = !inQuotes;
+                    }
+                    break;
+                case '{':
+                case '[':
+                    formatted.append(ch);
+                    if (!inQuotes) {
+                        formatted.append('\n');
+                        indentLevel++;
+                        formatted.append("  ".repeat(indentLevel));
+                    }
+                    break;
+                case '}':
+                case ']':
+                    if (!inQuotes) {
+                        formatted.append('\n');
+                        indentLevel--;
+                        formatted.append("  ".repeat(indentLevel));
+                    }
+                    formatted.append(ch);
+                    break;
+                case ',':
+                    formatted.append(ch);
+                    if (!inQuotes) {
+                        formatted.append('\n');
+                        formatted.append("  ".repeat(indentLevel));
+                    }
+                    break;
+                case ':':
+                    formatted.append(ch);
+                    if (!inQuotes) {
+                        formatted.append(" ");
+                    }
+                    break;
+                default:
+                    formatted.append(ch);
+            }
+        }
+        return formatted.toString();
     }
 }
