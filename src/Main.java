@@ -48,7 +48,7 @@ public class Main {
                     carNumber -= 1;
                     //----- Figure out how to input the object name into the method -----
                     System.out.print("Enter the customer's credit score (0-850): ");
-                    int creditScore = scan.nextInt();
+                    int creditScore = (int) scan.nextInt();
                     if(creditScore > 850 || creditScore < 0){
                         System.out.println("Error: credit score not in valid range");
                         System.out.println("Enter a credit score between 0 and 850: ");
