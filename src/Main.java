@@ -1,6 +1,8 @@
-import java.io.IOException;
 import java.util.*;
 
+/*
+This is the
+ */
 
 public class Main {
     public static void main(String[] args) {
@@ -12,13 +14,6 @@ public class Main {
         Vehicle car1 = new Vehicle();
         Vehicle car2 = new Vehicle("Ford","F-150",2020,"Blue", 22999);
         ArrayList<Vehicle> listOFVehicles = new ArrayList<>();
-
-        listOFVehicles.add(car1);
-        listOFVehicles.add(car2);
-        Employee employee = new Employee();
-        Employee employee1 = new Employee("Alex Gilbert","Branch Manager",125000);
-        System.out.println(employee);
-        System.out.println(employee1);
 
         do{
             System.out.println("===== Welcome to the Car Dealership Management System =====");
