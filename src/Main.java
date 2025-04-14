@@ -4,6 +4,9 @@ import java.util.*;
 This is the Main Method
  */
 
+/**
+ * This is the main method that runs the code
+ */
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
