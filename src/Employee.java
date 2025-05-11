@@ -2,8 +2,8 @@ import java.util.Random;
 
 /**
  * Created By Alex Gilbert
- * Employee Class for storing personal information
- * Employee Call with fields
+ * Employee Class for storing personal information with properties of name, title, salary, and ID
+ * Employee Call with fields with getters and setters for manipulaiton
  */
 
 public class Employee {
@@ -38,9 +38,9 @@ public class Employee {
 
     /**
      * This is a constructor to initialize Employee
-     * @param name
-     * @param title
-     * @param salary
+     * @param name the name of the employee
+     * @param title the job title of the employee
+     * @param salary the salary of the employee
      */
     Employee(String name, String title, double salary){
         this.Name = name;
@@ -52,8 +52,8 @@ public class Employee {
 
     /**
      * This is a constructor to initialize Employee without Job Title
-     * @param name
-     * @param salary
+     * @param name the name of the employee
+     * @param salary the salary of the employee
      */
     Employee(String name, double salary){
         this.Name = name;
@@ -64,7 +64,7 @@ public class Employee {
 
     /**
      * Overide the toString Method to format the way the information is printed
-     * @return
+     * @return String
      */
     @Override
     public String toString(){
