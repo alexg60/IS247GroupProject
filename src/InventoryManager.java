@@ -36,10 +36,18 @@ public class InventoryManager {
     }
 
     public static void listAllVehicles(ArrayList<Vehicle> listOFVehicles){
-        System.out.println(" ==== List of Vehicles ==== ");
         for(Vehicle item : listOFVehicles){
             System.out.print(item);
         }
     }
 
+    public static void saleOfVehicle(Vehicle vehicleSold, SalesPerson newSalesPerson) {
+        double carPrice = vehicleSold.getPrice();
+        newSalesPerson.addSales(carPrice);
+        double salesCommision = newSalesPerson.getCommissionRate() * carPrice;
+        newSalesPerson.addCommissionSales(salesCommision);
+        System.out.println("Vehicle Sold By: " + newSalesPerson.getName());
+        System.out.println("Price Sold For: " + vehicleSold.getPrice());
+        System.out.println("Commission Earned: " + salesCommision + "\n");
+    }
 }

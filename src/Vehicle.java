@@ -29,9 +29,51 @@ public class Vehicle {
         this.Color = "white";
     }
 
+    public double getPrice() {
+        return Price;
+    }
 
+    public int getYear() {
+        return Year;
+    }
 
+    public String getColor() {
+        return Color;
+    }
 
+    public String getMake() {
+        return Make;
+    }
+
+    public String getModel() {
+        return Model;
+    }
+
+    public void setColor(String color) {
+        Color = color;
+    }
+
+    public void setMake(String make) {
+        Make = make;
+    }
+
+    public void setModel(String model) {
+        Model = model;
+    }
+
+    public void setPrice(double price) {
+        Price = price;
+    }
+
+    public void setYear(int year) {
+        Year = year;
+    }
+
+    /**
+     * Overidding the toString method to format how information
+     * is printed
+     * @return
+     */
     @Override
     public String toString(){
         return ("Vehicle Make: " + Make + "\nVehicle Model: " + Model + "\nVehicle Year: " + Year +

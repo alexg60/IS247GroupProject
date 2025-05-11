@@ -10,19 +10,19 @@ public class Employee {
     /**
      * Name of the Employee
      */
-    private String Name;
+    String Name;
     /**
      * Job Title of the Employee
      */
-    private String Title;
+    String Title;
     /**
      * Salary of the Employee
      */
-    private double Salary;
+    double Salary;
     /**
      * Personal Identification Number of the Employee
      */
-    private int ID;
+    int ID;
 
     /**
      * Blank Constructor for Employee
@@ -57,7 +57,7 @@ public class Employee {
      */
     Employee(String name, double salary){
         this.Name = name;
-        this.Title = "Car Sales-Person";
+        this.Title = "Employee";
         this.Salary = salary;
         Random random = new Random();
         this.ID = random.nextInt(100000);    }
@@ -68,8 +68,8 @@ public class Employee {
      */
     @Override
     public String toString(){
-        return "Employee Name: " + Name + "\nEmployee Title: " + Title + "\nEmployee Salary: " + Salary +
-                "\nEmployee ID: " + ID;
+        return "\nEmployee Name: " + Name + "\nEmployee Title: " + Title + "\nEmployee Salary: " + Salary +
+                "\nEmployee ID: " + ID + "\n";
     }
 
 
