@@ -5,6 +5,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 
 /**
+ * Created by Alex Gilbert
  * This class connects to the Cars API and pulls information about the car
  */
 public class CarAPI {
