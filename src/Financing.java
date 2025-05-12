@@ -1,4 +1,9 @@
-
+/**
+ * Financing Class takes in three inputs being a vehicle class and two integers
+ * Has properties interestRate, monthlypayment blank 1 & 2, loan months, total payment and monthly interest rate.
+ * Based on the inputed information the other variables are filled out with if else statements and displays with a
+ * printf statement
+ */
 public class Financing {
     public static void getFinancing(Vehicle vehicle, int creditScore, int loanYears) throws myCustomException{
         double interestRate;

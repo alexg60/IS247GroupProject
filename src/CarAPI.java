@@ -4,6 +4,9 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 
+/**
+ * This class connects to the Cars API and pulls information about the car
+ */
 public class CarAPI {
     private static final String API_KEY = "DgjFu6OnACWIHhS0uoOvEw==MhcFW1JNkDuVWB70";
     private static final String BASE_URL = "https://api.api-ninjas.com/v1/cars";

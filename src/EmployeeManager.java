@@ -1,7 +1,14 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Deals with the employee and sales person objects and their correlating arraylists
+ */
 public class EmployeeManager {
+    /**
+     * Creates an employee object and adds it to the arraylist listOFEmployees
+     * @param listOFEmployees
+     */
     public static void addEmployee(ArrayList<Employee> listOFEmployees){
         Scanner scan = new Scanner(System.in);
         System.out.println(" ==== Adding Employee ==== ");
@@ -15,6 +22,11 @@ public class EmployeeManager {
         listOFEmployees.add(newEmployee);
         System.out.println(" ==== Successfully Added Employee ==== ");
     }
+
+    /**
+     * Creates a salesperson object and adds it to the arraylist listOFSalesPerson
+     * @param listOFSalesPerson
+     */
     public static void addSalesPerson(ArrayList<SalesPerson> listOFSalesPerson){
         Scanner scan = new Scanner(System.in);
         System.out.println(" ==== Adding Sales Person ==== ");
@@ -30,6 +42,10 @@ public class EmployeeManager {
         System.out.println(" ==== Successfully Added Employee ==== ");
     }
 
+    /**
+     * removes a employee object from the arraylist listOFEmployees
+     * @param listOFEmployees
+     */
     public static void removeEmployee(ArrayList<Employee> listOFEmployees){
         Scanner scan = new Scanner(System.in);
         if(listOFEmployees.isEmpty()){
@@ -44,6 +60,10 @@ public class EmployeeManager {
         }
     }
 
+    /**
+     * removes a sales person object from the arraylist listOFSalesPeople
+     * @param listOFSalesPeople
+     */
     public static void removeSalesPerson(ArrayList<SalesPerson> listOFSalesPeople){
         Scanner scan = new Scanner(System.in);
         if(listOFSalesPeople.isEmpty()){
@@ -58,12 +78,20 @@ public class EmployeeManager {
         }
     }
 
+    /**
+     * prints all employee objects in the arraylist listOFEmployees
+     * @param listOFEmployees
+     */
     public static void listAllEmployees(ArrayList<Employee> listOFEmployees){
         for(Employee item : listOFEmployees){
             System.out.print(item);
         }
     }
 
+    /**
+     * prints all sales person objects in the arraylist listOFSalesPeople
+     * @param listOFSalesPeople
+     */
     public static void listAllSalesPeople(ArrayList<SalesPerson> listOFSalesPeople){
         for(SalesPerson item : listOFSalesPeople){
             System.out.println(item);

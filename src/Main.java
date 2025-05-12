@@ -2,7 +2,8 @@ import java.lang.reflect.Array;
 import java.util.*;
 
 /**
- * This is the main method that runs the code
+ * This is the main method that takes in inputs and connects the other classes to
+ * run the Car Dealership Management System
  */
 public class Main {
     /**
@@ -164,6 +165,7 @@ public class Main {
                             } else {
                                 System.out.println("Error: Enter a number between 1-3");
                             }
+                            break;
                     }
                     break;
                 case 8:

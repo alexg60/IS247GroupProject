@@ -2,6 +2,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class InventoryManager {
+    /**
+     * Creates a vehicle object and adds it to the array list called listoFVehicles
+     * @param listOFVehicles
+     */
     public static void addVehicle(ArrayList<Vehicle> listOFVehicles){
         Scanner scan = new Scanner(System.in);
         System.out.println(" ==== Adding Vehicle ==== ");
@@ -21,6 +25,10 @@ public class InventoryManager {
         System.out.println(" ==== Successfully Added Vehicle ==== ");
     }
 
+    /**
+     * removes a vehicle object from the arraylist called listOFVehicles
+     * @param listOFVehicles
+     */
     public static void removeVehicle(ArrayList<Vehicle> listOFVehicles){
         Scanner scan = new Scanner(System.in);
         if(listOFVehicles.isEmpty()){
@@ -35,12 +43,21 @@ public class InventoryManager {
         }
     }
 
+    /**
+     * prints all of the objects in the listOFVehicles
+     * @param listOFVehicles
+     */
     public static void listAllVehicles(ArrayList<Vehicle> listOFVehicles){
         for(Vehicle item : listOFVehicles){
             System.out.print(item);
         }
     }
 
+    /**
+     * Takes in a vehicle input and a salesperson input and uses the properties from those objects in formulas
+     * @param vehicleSold
+     * @param newSalesPerson
+     */
     public static void saleOfVehicle(Vehicle vehicleSold, SalesPerson newSalesPerson) {
         double carPrice = vehicleSold.getPrice();
         newSalesPerson.addSales(carPrice);
