@@ -149,6 +149,7 @@ public class Main {
                             } else {
                                 System.out.println("Error: Enter a number between 1-3");
                             }
+                            break;
                         case 2:
                             System.out.println(" ==== Sales People Management ==== ");
                             System.out.println("1: Add Sales Person");
