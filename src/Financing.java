@@ -1,6 +1,6 @@
 
 public class Financing {
-    public static void getFinancing(Vehicle vehicle, int creditScore, int loanYears){
+    public static void getFinancing(Vehicle vehicle, int creditScore, int loanYears) throws myCustomException{
         double interestRate;
         double monthlyPaymentp1;
         double monthlyPaymentp2;
@@ -10,6 +10,9 @@ public class Financing {
         double monthlyInterestRate;
 
         //Assigns a different interest rate based on credit score
+        if(creditScore > 850 || creditScore < 0){
+            throw new myCustomException("Credit Score must be between 0 and 850");
+        }
         if(creditScore >= 800 && creditScore <= 850){
             interestRate = 0.025;
         } else if (creditScore >= 700) {

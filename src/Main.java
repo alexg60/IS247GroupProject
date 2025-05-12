@@ -78,7 +78,11 @@ public class Main {
                     System.out.print("Enter the length of the loan in years: ");
                     int loanYears = scan.nextInt();
                     //----- add error prevention for all the inputs -----
-                    Financing.getFinancing(listOFVehicles.get(carNumber), creditScore, loanYears);;
+                    try{
+                        Financing.getFinancing(listOFVehicles.get(carNumber), creditScore, loanYears);;
+                    } catch (myCustomException e) {
+                        System.out.println("Error: " + e.getMessage());
+                    }
                     break;
                 case 5:
                     System.out.println(" ===== Sales ===== ");

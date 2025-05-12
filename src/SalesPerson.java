@@ -1,5 +1,10 @@
 import javax.lang.model.element.Name;
 
+/**
+ * Created By Alex Gilbert
+ * Sales Person class is a class extended from the Employee Class
+ * Stores information
+ */
 public class SalesPerson extends Employee{
     private double commissionRate;
     private double totalSales;
