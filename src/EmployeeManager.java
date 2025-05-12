@@ -17,7 +17,7 @@ public class EmployeeManager {
         System.out.print("Enter the Salary of the Employee: ");
         double salary = scan.nextDouble();
         System.out.print("Enter the Title of the Employee: ");
-        String title = scan.next();
+        String title = scan.nextLine();
         Employee newEmployee = new Employee(name, title, salary);
         listOFEmployees.add(newEmployee);
         System.out.println(" ==== Successfully Added Employee ==== ");
